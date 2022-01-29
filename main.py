@@ -13,7 +13,7 @@ def hello_world(x):
     if r.exists(x) == 1:
         return r.get(x)
     else:
-        result = x + 1
+        result = int(x) + 1
         time.sleep(5)
         r.set(x, result, ex=30)
         return result
